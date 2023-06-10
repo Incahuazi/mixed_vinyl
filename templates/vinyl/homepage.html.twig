@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+
+    <div>
+        Tracks:
+        {% for track in tracks %}
+        <li>
+            {{track.song}} - {{track.artist|upper}}
+        </li>
+        {% endfor %}
+    </div>
+{% endblock %}
